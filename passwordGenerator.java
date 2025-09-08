@@ -23,7 +23,7 @@ public class passwordGenerator {
         scanner.close();
     }
     static String[] passGen(int length, int number){
-        char[] alphabets = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C',
+        char[] characters = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C',
         'D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','1','2','3','4','5','6','7','8','9','0','@','#','£','_','&','-','+','(',')','/','*',':',';','!','?','$','€','¥','^','='};
 
         String[] passwords = new String[number];
@@ -31,7 +31,7 @@ public class passwordGenerator {
         for(int i = 0; i < number; i++){
             String password = "";
             for(int j = 0; j < length; j++) {
-                char letter = alphabets[random.nextInt(alphabets.length)];
+                char letter = characters[random.nextInt(characters.length)];
                 password += letter;
             }
             passwords[i] = password;
